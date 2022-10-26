@@ -1,0 +1,128 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  ul {
+    list-style-type: circle;
+  }
+
+  .text {
+    color: #f2f2f2;
+    font-size: 14px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /*ngb-carousel .img-wrapper {*/
+  /*  position: relative;*/
+  /*  height: 0;*/
+  /*  padding-top: 100%;*/
+  /*}*/
+
+  ngb-carousel .img-wrapper > img {
+    width: 100%
+  }
+</style>
+
+
+<h5>Discord Bot - Node.js, Discord.js</h5>
+<h6><i class="fa fa-calendar"></i> June 2020 - Present</h6>
+<ul>
+  <li>Personal Discord bot made in order to learn JavaScript as well as experience working with a multitude of different APIs.
+  <li>
+    Implemented multiple capabilities such as member role selection, playing YouTube audio through voice channels with the
+    ytdl-core API, and listing information about anime through Jikan MAL API.
+  </li>
+  <li>Constantly iterated on user feedback for better features or debugging any problems that arose during server use.</li>
+  <li>Deployed in the cloud on a AWS EC2 instance so that the bot may be available at all times.</li>
+</ul>
+<ngb-carousel>
+  <ng-template ngbSlide>
+    <div class="img-wrapper">
+      <img src="../../assets/images/discbot1.png" />
+    </div>
+    <div class="carousel-caption">
+      <div class="text">List of Commands</div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="img-wrapper">
+      <img src="../../assets/images/discbot2.png" />
+    </div>
+    <div class="carousel-caption">
+      <div class="text">MyAnimeList Search</div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="img-wrapper">
+      <img src="../../assets/images/discbot3.png" />
+    </div>
+    <div class="carousel-caption">
+      <div class="text">Color Changer</div>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<h5>AI Development, Bug Fixing, and Animation Implementation in Video Game Development Project - Unity, C#</h5>
+<h6><i class="fa fa-calendar"></i> Oct 2020 - Dec 2020</h6>
+<ul>
+  <li>Group video game development project of a 2D platformer game with unique health mechanics.</li>
+  <li>Implemented enemy AI using an A* Pathfinding package, as well as optimized the enemies’ damage, speed, and placement throughout the level.</li>
+  <li>Implemented character sprites and animations.</li>
+  <li>Iteratively made changes and fixed bugs based on players’ feedback.</li>
+  <li>Worked collaboratively with 5 others using Git, and was the main source of help when merge conflicts occurred.</li>
+</ul>
+<div style="text-align:center">
+  <iframe width="600" height="337" src="https://www.youtube.com/embed/WUB3EefS9Lc" title="Transfusion Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+<h5>Crux Compiler - Java</h5>
+<h6><i class="fa fa-calendar"></i> Apr 2021 - June 2021</h6>
+<ul>
+  <li>Built a simple compiler that translates the Crux programming language into executable x86 assembly.</li>
+  <li>Utilized ANTLR to generate a parser for the specified Crux grammar to create a parse tree that is used to create an Abstract Syntax Tree (AST).</li>
+  <li>Implemented a compile time type checker to catch any possible type errors.</li>
+  <li>Expanded my knowledge of the compiler pipeline from code to assembly and the possible inefficiencies that may stem from programmer oversight</li>
+</ul>
+
+
+<h5>Charting UI and Message Analysis for Stock Trading Bot - Python</h5>
+<h6><i class="fa fa-calendar"></i> July 2020</h6>
+<ul>
+  <li>Took part along with 3 others in the development of a bot that uses Robinhood's / TD Ameritrade's API to trade stocks based on announcements from a Discord server.</li>
+  <li>Worked with Finplot and Pandas packages to generate stock charts within a set period of time based on Yahoo stock data that marked where the bot had bought and sold.</li>
+  <li>Implemented heuristic regex parsing of Discord messages to mark what messages were important and which were alerts to buy and sell certain stocks.</li>
+  <li>Created unit tests for the bot in order to verify that the bot was categorizing messages correctly, and made changes to message parsing if the bot had unexpected output.</li>
+</ul>
+
+
+<!--<script>-->
+<!--  let slideIndex = 1;-->
+<!--  showSlides(slideIndex);-->
+
+<!--  function plusSlides(n) {-->
+<!--    showSlides(slideIndex += n);-->
+<!--  }-->
+
+<!--  function currentSlide(n) {-->
+<!--    showSlides(slideIndex = n);-->
+<!--  }-->
+
+<!--  function showSlides(n) {-->
+<!--    let i;-->
+<!--    let slides = document.getElementsByClassName("mySlides");-->
+<!--    let dots = document.getElementsByClassName("dot");-->
+<!--    if (n > slides.length) {slideIndex = 1}-->
+<!--    if (n < 1) {slideIndex = slides.length}-->
+<!--    for (i = 0; i < slides.length; i++) {-->
+<!--      slides[i].style.display = "none";-->
+<!--    }-->
+<!--    for (i = 0; i < dots.length; i++) {-->
+<!--      dots[i].className = dots[i].className.replace(" active", "");-->
+<!--    }-->
+<!--    slides[slideIndex-1].style.display = "block";-->
+<!--    dots[slideIndex-1].className += " active";-->
+<!--  }-->
+<!--</script>-->
