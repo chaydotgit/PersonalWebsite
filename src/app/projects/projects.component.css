@@ -1,0 +1,29 @@
+ul {
+  list-style-type: circle;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 14px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+ngb-carousel {
+  height: auto;
+  width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.btn-time {
+  background: #73998a;
+  color: white;
+  border-color: #73998a;
+  border-radius: 8px;
+  border-style: solid;
+  padding: 5px;
+}
