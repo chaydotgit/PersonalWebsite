@@ -21,9 +21,13 @@ body {
 }
 
 .text-section {
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 60px;
+  margin: 10px 200px 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .text-section {
+    margin: 10px 30px 20px;
+  }
 }
 
 footer {
