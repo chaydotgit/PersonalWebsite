@@ -44,4 +44,14 @@ ngb-carousel {
   border-radius: 8px;
   border-style: solid;
   padding: 5px;
+  margin-right: 10px;
+}
+.btn-code {
+  background: white;
+  color: #73998a;
+  border-color: #73998a;
+  border-radius: 8px;
+  border-style: solid;
+  padding: 5px;
+  margin-right: 2px;
 }
