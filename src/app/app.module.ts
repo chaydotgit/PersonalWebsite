@@ -10,6 +10,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { EmailFormComponent } from './email-form/email-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     HomeComponent,
     ProjectsComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    EmailFormComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
