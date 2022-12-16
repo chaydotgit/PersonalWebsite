@@ -2,6 +2,12 @@ ul {
   list-style-type: circle;
 }
 
+.fancy-txt {
+  font-family: playfair-display, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .text {
   color: #f2f2f2;
   font-size: 14px;
@@ -38,9 +44,9 @@ ngb-carousel {
 }
 
 .btn-time {
-  background: #73998a;
+  background: #2f7994;
   color: white;
-  border-color: #73998a;
+  border-color: #2f7994;
   border-radius: 8px;
   border-style: solid;
   padding: 5px;
@@ -48,8 +54,8 @@ ngb-carousel {
 }
 .btn-code {
   background: white;
-  color: #73998a;
-  border-color: #73998a;
+  color: #2f7994;
+  border-color: #2f7994;
   border-radius: 8px;
   border-style: solid;
   padding: 5px;
