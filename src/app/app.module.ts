@@ -10,7 +10,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
