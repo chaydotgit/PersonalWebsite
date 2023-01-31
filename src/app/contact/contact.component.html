@@ -1,3 +1,11 @@
 <div class="text-center">
   please message me on LinkedIn while I try to figure out how to set up emails :^)
+
+  <div *ngIf="{
+      emailData: emailData | async
+    } as route"
+  >
+    <h3 *ngIf="route.emailData"> Email: {{route.emailData.email}} <i>(last updated: {{route.emailData.lastUpdatedDate}})</i></h3>
+    <button (click)="getEmail()" *ngIf="!route.emailData">Click me for email!</button>
+  </div>
 </div>
