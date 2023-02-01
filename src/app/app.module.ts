@@ -7,10 +7,12 @@ import {AppRoutingModule} from "./app-routing.module";
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { FooterComponent } from './footer/footer.component';
+import {ContactModalContent, FooterComponent} from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from "@angular/common";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,14 +20,16 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ProjectsComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    ContactModalContent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AppRoutingModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
