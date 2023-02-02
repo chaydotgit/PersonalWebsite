@@ -1,0 +1,10 @@
+.contact-btn {
+  background-color: #2f7994; /* Green */
+  border: none;
+  border-radius: 5px;
+  color: white !important;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
