@@ -7,9 +7,8 @@ import {AppRoutingModule} from "./app-routing.module";
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
-import {ContactModalContent, FooterComponent} from './footer/footer.component';
-import { ContactComponent } from './contact/contact.component';
-import {FlexLayoutModule} from "@angular/flex-layout";
+import { ContactModalContent, FooterComponent } from './footer/footer.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from "@angular/common";
 
@@ -20,7 +19,6 @@ import { CommonModule } from "@angular/common";
     HomeComponent,
     ProjectsComponent,
     FooterComponent,
-    ContactComponent,
     ContactModalContent
   ],
   imports: [
