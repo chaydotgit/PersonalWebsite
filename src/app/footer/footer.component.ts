@@ -6,9 +6,8 @@ import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'contact-modal-contact',
-  styleUrls: ['./footer.component.css'],
   template: `
-      <link rel="stylesheet" href="https://use.typekit.net/gsr7uey.css" xmlns="http://www.w3.org/1999/html">
+    <link rel="stylesheet" href="https://use.typekit.net/gsr7uey.css" xmlns="http://www.w3.org/1999/html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <div *ngIf="{
