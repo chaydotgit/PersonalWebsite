@@ -12,7 +12,7 @@ export interface EmailResponse {
 })
 export class EmailApiService {
   private url = 'https://f1bd3l6trk.execute-api.us-west-1.amazonaws.com/api/contact/email'
-  //  private url = 'https://localhost:7252/api/contact/email'
+  // private url = 'https://localhost:7252/api/contact/email'
   constructor(private httpClient: HttpClient) { }
 
   getEmailAddress(): Observable<EmailResponse> {

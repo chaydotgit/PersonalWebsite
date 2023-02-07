@@ -6,8 +6,9 @@ import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'contact-modal-contact',
+  styleUrls: ['./footer.component.css'],
   template: `
-    <link rel="stylesheet" href="https://use.typekit.net/gsr7uey.css">
+      <link rel="stylesheet" href="https://use.typekit.net/gsr7uey.css" xmlns="http://www.w3.org/1999/html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <div *ngIf="{
@@ -21,7 +22,8 @@ import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
       <div class="modal-body text-center">
         Please contact me through my email below!
-        <div *ngIf="route.emailData"> <i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;{{route.emailData.email}} </div>
+        <div *ngIf="route.emailData; else elseBlock"> <i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;{{route.emailData.email}} </div>
+        <ng-template #elseBlock><br><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></ng-template>
       </div>
 
       <div class="modal-footer">
