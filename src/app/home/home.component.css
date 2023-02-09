@@ -7,7 +7,7 @@
 .sidenav {
   text-align: center;
   background-color: #2f7994;
-  padding: 20px 50px;
+  padding: 20px 2%;
 }
 
 .fancy-txt {
@@ -20,11 +20,18 @@
   border-radius: 9px;
   height: 200px;
   width: 200px;
+  margin: auto;
 }
 
 .main {
   text-align: left;
   margin-top: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    text-align: center;
+  }
 }
 
 .button {
