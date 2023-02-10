@@ -7,15 +7,12 @@ import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 @Component({
   selector: 'contact-modal-contact',
   template: `
-    <link rel="stylesheet" href="https://use.typekit.net/gsr7uey.css" xmlns="http://www.w3.org/1999/html">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <div *ngIf="{
       emailData: emailData | async
     } as route"
     >
       <div class="modal-header">
-        <h3 class="modal-title text-center" style="font-family:playfair-display, serif; font-weight: bold">Contact</h3>
+        <h3 class="modal-title fancy-txt">Contact</h3>
         <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
       </div>
 

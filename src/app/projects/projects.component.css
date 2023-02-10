@@ -2,12 +2,6 @@ ul {
   list-style-type: circle;
 }
 
-.fancy-txt {
-  font-family: playfair-display, serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
 .text {
   color: #f2f2f2;
   font-size: 14px;
@@ -52,6 +46,7 @@ ngb-carousel {
   padding: 5px;
   margin-right: 10px;
 }
+
 .btn-code {
   background: white;
   color: #2f7994;

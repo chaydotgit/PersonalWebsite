@@ -1,9 +1,17 @@
  /* You can add global styles to this file, and also import other style files */
+@import url('https://use.typekit.net/gsr7uey.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 html {
   font-size: 14px;
   /*position: relative;*/
   min-height: 100vh;
+}
+
+.fancy-txt {
+ font-family: playfair-display, serif;
+ font-weight: 700 !important;
+ font-style: normal;
 }
 
 a:link, a:visited {
