@@ -1,4 +1,7 @@
-# Untitled
+# Portfolio Website
+![GitHub last commit](https://img.shields.io/github/last-commit/chaydotgit/personalwebsite?style=for-the-badge)
+[![GitHub issues](https://img.shields.io/github/issues/chaydotgit/PersonalWebsite?style=for-the-badge)](https://github.com/chaydotgit/PersonalWebsite/issues)
+![image](https://user-images.githubusercontent.com/26285957/221731314-642da8b9-75dc-4f38-b674-45cf9a102bff.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
 
