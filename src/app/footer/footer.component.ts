@@ -4,6 +4,7 @@ import { EmailApiService, EmailResponse} from "../emailapi.service";
 import { Observable, map, of } from "rxjs";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
+
 @Component({
   selector: 'contact-modal-contact',
   template: `
@@ -24,7 +25,7 @@ import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
       <div class="modal-footer">
         <div *ngIf="route.emailData"><i>last updated: {{route.emailData.lastUpdatedDate}} from
-          <a href="https://f1bd3l6trk.execute-api.us-west-1.amazonaws.com/api/contact/email" target="_blank">Personal API</a></i>
+          <a href="https://api.chayannerodriguez.com/api/contact/email" target="_blank">Personal API</a></i>
         </div>
       </div>
     </div>
