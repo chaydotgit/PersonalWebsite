@@ -18,13 +18,27 @@
 }
 
 .main {
-  text-align: left;
+  text-align: justify;
   margin-top: 15px;
+}
+
+.about {
+  background-color: #e1e1e1;
+  padding: 20px 20px 3px;
+}
+
+ngb-carousel {
+  margin: auto;
+  max-width: 300px;
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
   .main {
     text-align: center;
+  }
+  ngb-carousel {
+    max-width: 100%;
   }
 }
 
