@@ -8,6 +8,13 @@ html {
   min-height: 100vh;
 }
 
+body {
+  background-image: url("src/assets/AdobeStock_503005867.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
 .fancy-txt {
  font-family: playfair-display, serif;
  font-weight: 700 !important;
