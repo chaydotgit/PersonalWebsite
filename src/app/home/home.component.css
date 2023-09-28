@@ -8,11 +8,10 @@
 .sidenav {
   flex: .5;
   text-align: center;
-  margin: auto auto 20px;
+  margin: 30px;
   border-radius: 9px;
   background-color: #f6f2ec;
   padding: 20px 2%;
-
 }
 
 .profile-pic {
@@ -53,7 +52,7 @@
   width: 50px;
   text-align: center;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 100px;
   margin: 2px;
 }
 
