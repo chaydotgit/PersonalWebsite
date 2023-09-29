@@ -1,14 +1,14 @@
 .home {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 30px;
   margin: 30px 30px 30px;
 }
 
 .sidenav {
   flex: .5;
   text-align: center;
-  margin: 30px;
   border-radius: 9px;
   background-color: #f6f2ec;
   padding: 20px 2%;
@@ -18,16 +18,34 @@
   border-radius: 9px;
   height: 200px;
   width: 200px;
-  margin: auto;
+  margin: 10px 10px 10px;
 }
 
 .home-text {
   flex: 1;
   padding: 20px;
-  margin: auto;
   border-radius: 9px;
   text-align: justify;
   background-color: #f6f2ec;
+  margin-bottom: 30px;
+}
+
+.social-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+li::marker {
+  content: "+ ";
+  color: #afc47d;
+  font-weight: bolder;
 }
 
 .button {
@@ -53,7 +71,6 @@
   text-align: center;
   text-decoration: none;
   border-radius: 100px;
-  margin: 2px;
 }
 
 .fa:hover {
@@ -84,11 +101,26 @@
   width: 20px;
 }
 
-
 @media screen and (min-width: 800px) {
+  .sidenav {
+    margin-bottom: auto;
+  }
   .home {
     flex-direction: row;
-    justify-content: space-around;
+    margin: 30px 50px 30px;
+    gap: 40px;
+  }
+  .social-links {
+    justify-content: left;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .home {
+    flex-direction: row;
+    margin: 30px 200px 30px;
+    gap: 50px;
   }
   .sidenav {
     flex: 1;

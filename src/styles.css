@@ -35,23 +35,9 @@ body {
   margin-bottom: 60px;
 }
 
-.text-section {
- margin: 10px 30px 20px;
-}
-
-@media screen and (min-width: 600px) {
- .text-section {
-   margin: 10px 75px 20px;
- }
-}
-
-@media screen and (min-width: 1280px) {
- .text-section {
-   margin: 10px 200px 20px;
- }
-}
-
 footer {
+ background-color: #f6f2ec;
+ position: absolute;
   bottom: 0;
   padding: 10px;
   width: 100%;

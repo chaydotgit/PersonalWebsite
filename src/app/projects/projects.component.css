@@ -1,5 +1,38 @@
-ul {
-  list-style-type: circle;
+.projects-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f2ec;
+  margin: 30px 30px 30px;
+  padding: 10px;
+  border-radius: 9px;
+}
+
+.intro-text {
+  text-align: center;
+}
+
+h1 {
+  font-family: playfair-display, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 30px 30px;
+  padding: 20px;
+  border-radius: 9px;
+  background-color: #f6f2ec;
+}
+
+li::marker {
+  content: "+ ";
+  color: #afc47d;
+  font-weight: bolder;
 }
 
 .text {
@@ -10,6 +43,11 @@ ul {
   bottom: 8px;
   width: 100%;
   text-align: center;
+}
+
+.web-gif {
+  width: 250px;
+  margin: auto;
 }
 
 ngb-carousel {
@@ -38,9 +76,9 @@ ngb-carousel {
 }
 
 .btn-time {
-  background: #2f7994;
-  color: white;
-  border-color: #2f7994;
+  background: #afc47d;
+  color: #f6f2ec;
+  border-color: #afc47d;
   border-radius: 8px;
   border-style: solid;
   padding: 5px;
@@ -48,9 +86,9 @@ ngb-carousel {
 }
 
 .btn-code {
-  background: white;
-  color: #2f7994;
-  border-color: #2f7994;
+  background: #f6f2ec;
+  color: #afc47d;
+  border-color: #afc47d;
   border-radius: 8px;
   border-style: solid;
   padding: 5px;
@@ -58,12 +96,46 @@ ngb-carousel {
 }
 
 .btn-repo {
-  background: #5999b3;
-  color: white;
-  border-color: #5999b3;
+  background: #afc47d;
+  color: #f6f2ec;
+  border-color: #afc47d;
   border-radius: 8px;
   border-style: solid;
   padding: 4px;
   margin-top: 1px;
   display: inline-block;
+}
+
+@media screen and (min-width: 412px) {
+  h1 {
+    font-size: 25px;
+  }
+  .projects-intro {
+    margin: 50px;
+  }
+  .web-gif {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 40px;
+  }
+  .projects-intro {
+     margin: 30px 20%;
+  }
+
+  .web-gif {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .projects-intro {
+    margin: 30px 30%;
+  }
+  .projects {
+    margin: 30px 200px 30px;
+  }
 }
