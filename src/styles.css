@@ -1,11 +1,26 @@
  /* You can add global styles to this file, and also import other style files */
 @import url('https://use.typekit.net/gsr7uey.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
 
 html {
   font-size: 14px;
-  /*position: relative;*/
   min-height: 100vh;
+}
+
+body {
+  background-image: url("src/assets/AdobeStock_503005867.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+footer {
+ background-color: #f6f2ec;
+ position: absolute;
+ bottom: 0;
+ padding: 10px;
+ width: 100%;
 }
 
 .fancy-txt {
@@ -15,7 +30,7 @@ html {
 }
 
 a:link, a:visited {
-  color: #176177;
+  color: #84964d;
 }
 
 @media (min-width: 768px) {
@@ -24,32 +39,7 @@ a:link, a:visited {
   }
 }
 
-body {
-  margin-bottom: 60px;
-}
-
-.text-section {
- margin: 10px 30px 20px;
-}
-
-@media screen and (min-width: 600px) {
- .text-section {
-   margin: 10px 75px 20px;
- }
-}
-
-@media screen and (min-width: 1280px) {
- .text-section {
-   margin: 10px 200px 20px;
- }
-}
-
-footer {
-  bottom: 0;
-  padding: 10px;
-  width: 100%;
-}
-
+ /* loading screen ellipsis animation*/
 .lds-ellipsis {
  display: inline-block;
  position: relative;

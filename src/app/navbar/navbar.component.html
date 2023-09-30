@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
               aria-expanded="false" aria-label="Toggle navigation">
@@ -8,10 +8,13 @@
       <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
         <ul class="navbar-nav flex-grow-1">
           <li class="nav-item">
-            <a routerLink="home" class="nav-link text-dark">Home</a>
+            <a routerLink="home" class="nav-link text-dark fancy-txt">H O M E</a>
           </li>
           <li class="nav-item">
-            <a routerLink="projects" class="nav-link text-dark">Projects</a>
+            <a routerLink="projects" class="nav-link text-dark fancy-txt">P R O J E C T S</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="[]" (click)="open()" class="nav-link text-dark fancy-txt">C O N N E C T</a>
           </li>
         </ul>
       </div>

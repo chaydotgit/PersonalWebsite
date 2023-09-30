@@ -1,21 +1,71 @@
-ul {
-  list-style-type: circle;
+.projects-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f2ec;
+  margin: 30px 30px 30px;
+  padding: 10px;
+  border-radius: 9px;
 }
 
-.text {
-  color: #f2f2f2;
-  font-size: 14px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
+.intro-text {
   text-align: center;
+}
+
+h1 {
+  font-family: playfair-display, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 30px 80px;
+  padding: 10px;
+  gap: 20px;
+  border-radius: 9px;
+  background-color: #f6f2ec;
+}
+
+.timeline-line {
+  display: none;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+}
+.project-date {
+  color: #afc47d;
+  font-family: playfair-display, serif;
+  font-size: 15px;
+}
+
+.project-description {
+  margin: 3px 10px 0px;
+}
+
+li::marker {
+  content: "+ ";
+  color: #afc47d;
+  font-weight: 700;
+}
+
+.web-gif {
+  width: 250px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  border-radius: 9px;
 }
 
 ngb-carousel {
   margin: auto;
   max-width: 600px;
-  text-align: center;
+  text-align: center !important;
 }
 
 .youtube-player {
@@ -37,33 +87,103 @@ ngb-carousel {
   height: 100%;
 }
 
-.btn-time {
-  background: #2f7994;
-  color: white;
-  border-color: #2f7994;
-  border-radius: 8px;
-  border-style: solid;
-  padding: 5px;
-  margin-right: 5px;
-}
-
 .btn-code {
-  background: white;
-  color: #2f7994;
-  border-color: #2f7994;
-  border-radius: 8px;
+  background: #f6f2ec;
+  color: #afc47d;
+  border-color: #afc47d;
+  border-radius: 9px;
   border-style: solid;
-  padding: 5px;
+  padding: 4px;
   margin-right: 2px;
 }
 
 .btn-repo {
-  background: #5999b3;
-  color: white;
-  border-color: #5999b3;
-  border-radius: 8px;
+  background: #afc47d;
+  color: #f6f2ec;
+  border-color: #afc47d;
+  border-radius: 9px;
   border-style: solid;
-  padding: 4px;
+  padding: 3px;
   margin-top: 1px;
   display: inline-block;
+}
+
+@media screen and (min-width: 412px) {
+  h1 {
+    font-size: 21px;
+  }
+  .projects-intro {
+    margin: 50px;
+  }
+  .web-gif {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 40px;
+  }
+  .projects-intro {
+     margin: 30px 20%;
+  }
+
+  .projects {
+    padding: 20px;
+  }
+  .project-item {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .timeline {
+    width: 140px;
+    text-align: center;
+  }
+  .timeline-line {
+    display: block;
+    border-left: 2px solid #afc47d;
+    position: relative;
+    left: 50%;
+    height: 98%;
+  }
+  .project-description {
+    flex: 1;
+  }
+  .web-gif {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .projects-intro {
+    margin: 30px 30%;
+  }
+  .projects {
+    margin: 30px 100px 80px;
+  }
+  .timeline {
+    width: 150px;
+  }
+  .project-date {
+    font-size: medium;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .projects {
+    margin: 30px 150px 80px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .projects {
+    margin: 30px 200px 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .project-item {
+    gap: 30px;
+  }
 }
