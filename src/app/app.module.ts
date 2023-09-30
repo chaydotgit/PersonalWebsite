@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from "./app-routing.module";
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent, ContactModalContent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ContactModalContent, FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './footer/footer.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from "@angular/common";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { CommonModule } from "@angular/common";
     AppRoutingModule,
     FlexLayoutModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
