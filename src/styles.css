@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-image: url("src/assets/AdobeStock_503005867.jpeg");
+  background-image: url("assets/images/AdobeStock_503005867.jpeg");
   background-size: cover;
   background-attachment: fixed;
   position: relative;
