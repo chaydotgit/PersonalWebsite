@@ -17,14 +17,14 @@ h1 {
   font-family: playfair-display, serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .projects {
   display: flex;
   flex-direction: column;
   margin: 30px 30px 80px;
-  padding: 20px;
+  padding: 10px;
   gap: 20px;
   border-radius: 9px;
   background-color: #f6f2ec;
@@ -45,13 +45,13 @@ h1 {
 }
 
 .project-description {
-  margin: 3px 10px 10px;
+  margin: 3px 10px 0px;
 }
 
 li::marker {
   content: "+ ";
   color: #afc47d;
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 .web-gif {
@@ -91,9 +91,9 @@ ngb-carousel {
   background: #f6f2ec;
   color: #afc47d;
   border-color: #afc47d;
-  border-radius: 8px;
+  border-radius: 9px;
   border-style: solid;
-  padding: 5px;
+  padding: 4px;
   margin-right: 2px;
 }
 
@@ -101,16 +101,16 @@ ngb-carousel {
   background: #afc47d;
   color: #f6f2ec;
   border-color: #afc47d;
-  border-radius: 8px;
+  border-radius: 9px;
   border-style: solid;
-  padding: 4px;
+  padding: 3px;
   margin-top: 1px;
   display: inline-block;
 }
 
 @media screen and (min-width: 412px) {
   h1 {
-    font-size: 25px;
+    font-size: 21px;
   }
   .projects-intro {
     margin: 50px;
@@ -127,11 +127,14 @@ ngb-carousel {
   .projects-intro {
      margin: 30px 20%;
   }
+
+  .projects {
+    padding: 20px;
+  }
   .project-item {
     flex-direction: row;
     gap: 10px;
   }
-
   .timeline {
     width: 140px;
     text-align: center;
@@ -163,6 +166,14 @@ ngb-carousel {
   }
   .project-date {
     font-size: medium;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .projects {
+    margin: 30px 150px 80px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 

@@ -3,11 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
-  margin: 30px 30px 30px;
+  margin: 30px 30px 80px;
 }
 
 .sidenav {
-  flex: .5;
   text-align: center;
   border-radius: 9px;
   background-color: #f6f2ec;
@@ -22,12 +21,10 @@
 }
 
 .home-text {
-  flex: 1;
   padding: 20px;
   border-radius: 9px;
   text-align: justify;
   background-color: #f6f2ec;
-  margin-bottom: 30px;
 }
 
 .social-links {
@@ -48,29 +45,13 @@ li::marker {
   font-weight: bolder;
 }
 
-.button {
-  background-color: #afc47d; /* Green */
-  border: none;
-  border-radius: 5px;
-  color: white !important;
-  padding: 8px 51px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.button:hover {
-  opacity: 0.7;
-  color: #afc47d;
-}
-
 .fa {
   padding: 10px;
-  font-size: 25px !important;
   width: 50px;
+  border-radius: 50%;
+  font-size: 25px !important;
   text-align: center;
   text-decoration: none;
-  border-radius: 100px;
 }
 
 .fa:hover {
@@ -78,17 +59,7 @@ li::marker {
   color: #afc47d;
 }
 
-.fa-linkedin {
-  background: #afc47d;
-  color: white !important;
-}
-
-.fa-github {
-  background: #afc47d;
-  color: white !important;
-}
-
-.fa-instagram {
+.fa-linkedin, .fa-github, .fa-instagram {
   background: #afc47d;
   color: white !important;
 }
@@ -102,13 +73,12 @@ li::marker {
 }
 
 @media screen and (min-width: 800px) {
-  .sidenav {
-    margin-bottom: auto;
-  }
   .home {
     flex-direction: row;
-    margin: 30px 50px 30px;
-    gap: 40px;
+    margin: 30px 50px 80px;
+  }
+  .sidenav {
+    margin-bottom: auto;
   }
   .social-links {
     justify-content: left;
@@ -119,7 +89,7 @@ li::marker {
 @media screen and (min-width: 1280px) {
   .home {
     flex-direction: row;
-    margin: 30px 200px 30px;
+    margin: 30px 200px 80px;
     gap: 50px;
   }
   .sidenav {
