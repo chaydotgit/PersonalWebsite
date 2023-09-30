@@ -10,7 +10,6 @@ import { FooterComponent } from './footer/footer.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from "@angular/common";
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     FlexLayoutModule,
     HttpClientModule,
     CommonModule,
-    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
