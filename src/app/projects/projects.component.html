@@ -17,7 +17,9 @@
     </div>
 
     <div class="project-description">
-      <div class="fancy-txt h5">Artist Website <a href="https://pyupew.com/" class="bi bi-box-arrow-up-right" target="_blank" style="color:#afc47d"></a></div>
+      <div class="fancy-txt h5" *ngIf="{
+      project5: project5 | async
+      } as route">{{route.project5!.projectName}} <a href="https://pyupew.com/" class="bi bi-box-arrow-up-right" target="_blank" style="color:#afc47d"></a></div>
       <h6>
         <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Angular</button>
         <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> C#</button>
@@ -55,7 +57,9 @@
     </div>
 
     <div class="project-description">
-      <div class="fancy-txt h5">Portfolio Website</div>
+      <div class="fancy-txt h5" *ngIf="{
+      project4: project4 | async
+      } as route">{{route.project4!.projectName}}</div>
       <h6>
         <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Angular</button>
         <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> C#</button>
@@ -95,7 +99,9 @@
     </div>
 
     <div class="project-description">
-      <div class="fancy-txt h5">Discord Bot</div>
+      <div class="fancy-txt h5" *ngIf="{
+      project3: project3 | async
+      } as route">{{route.project3!.projectName}}</div>
       <h6>
         <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> JavaScript</button>
         <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Node.js</button>
@@ -153,7 +159,9 @@
       <div class="timeline-line"></div>
     </div>
     <div class="project-description">
-      <div class="fancy-txt h5">AI Development, Bug Fixing, and Animation Implementation in Video Game Development Project</div>
+      <div class="fancy-txt h5" *ngIf="{
+      project2: project2 | async
+      } as route">{{route.project2!.projectName}}</div>
       <h6>
         <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Unity</button>
         <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> C#</button>
@@ -192,7 +200,9 @@
     </div>
 
     <div class="project-description">
-      <div class="fancy-txt h5">Crux Compiler</div>
+      <div class="fancy-txt h5" *ngIf="{
+      project1: project1 | async
+      } as route">{{route.project1!.projectName}}</div>
       <h6>
         <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Java</button>
       </h6>
@@ -222,7 +232,9 @@
     </div>
 
     <div class="project-description">
-      <div class="fancy-txt h5">Charting UI and Message Analysis for Stock Trading Bot</div>
+      <div class="fancy-txt h5" *ngIf="{
+      project0: project0 | async
+      } as route">{{route.project0!.projectName}}</div>
       <h6>
         <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Python</button>
       </h6>
