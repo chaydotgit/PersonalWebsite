@@ -8,7 +8,8 @@ export interface ProjectResponse {
   projectName: string;
   startDate: string;
   endDate: string;
-  tech: string;
+  tech: string[];
+  descriptions: DescriptionResponse[];
   repoLink: string;
 }
 
@@ -16,7 +17,7 @@ export interface DescriptionResponse {
   descriptionId: string;
   projectId: string;
   bulletOrder: number;
-  description: string;
+  description1: string;
 }
 
 @Injectable({
@@ -32,9 +33,5 @@ export class ProjectApiService {
 
   getProject(id: number): Observable<ProjectResponse> {
     return this.httpClient.get<ProjectResponse>(`${this.url}/projects/${id}`);
-  }
-
-  getProjectDescription(id: number): Observable<DescriptionResponse[]> {
-    return this.httpClient.get<DescriptionResponse[]>(`${this.url}/descriptions/project/${id}`);
   }
 }
