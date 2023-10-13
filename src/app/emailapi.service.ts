@@ -12,7 +12,7 @@ export interface EmailResponse {
   providedIn: 'root'
 })
 export class EmailApiService {
-  private url = environment.apiUrl;
+  private url = environment.contactApi;
   constructor(private httpClient: HttpClient) { }
 
   getEmailAddress(): Observable<EmailResponse> {

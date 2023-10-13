@@ -14,12 +14,14 @@ projects : projects | async
 } as projRoute">
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">Apr 2023 - Present</span>
+      <span class="project-date">{{convertDate(projRoute.projects![5].startDate)}} - {{convertDate(projRoute.projects![5].endDate)}}</span>
       <div class="timeline-line"></div>
     </div>
 
     <div class="project-description">
-      <div class="fancy-txt h5">{{projRoute.projects![5].projectName}} <a href="https://pyupew.com/" class="bi bi-box-arrow-up-right" target="_blank" style="color:#afc47d"></a></div>
+      <div class="fancy-txt h5">
+        {{projRoute.projects![5].projectName}} <a href="https://pyupew.com/" class="bi bi-box-arrow-up-right" target="_blank" style="color:#afc47d"></a>
+      </div>
       <div class="h6">
         <ng-container *ngFor="let tech of projRoute.projects![5].tech">
           <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
@@ -38,7 +40,7 @@ projects : projects | async
 
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">Oct 2022 - Present</span>
+      <span class="project-date">{{convertDate(projRoute.projects![4].startDate)}} - {{convertDate(projRoute.projects![4].endDate)}}</span>
       <div class="timeline-line"></div>
     </div>
 
@@ -47,10 +49,9 @@ projects : projects | async
         {{projRoute.projects![4].projectName}}
       </div>
       <div class="h6">
-        <span *ngFor="let tech of projRoute.projects![4].tech">
+        <ng-container *ngFor="let tech of projRoute.projects![4].tech">
           <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
-        </span>
-
+        </ng-container>
         <a href="{{projRoute.projects![4].repoLink}}" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
       </div>
       <ul>
@@ -65,7 +66,7 @@ projects : projects | async
 
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">June 2020 - Present</span>
+      <span class="project-date">{{convertDate(projRoute.projects![3].startDate)}} - {{convertDate(projRoute.projects![3].endDate)}}</span>
       <div class="timeline-line"></div>
     </div>
 
@@ -74,9 +75,9 @@ projects : projects | async
         {{projRoute.projects![3].projectName}}
       </div>
       <div class="h6">
-        <span *ngFor="let tech of projRoute.projects![3].tech">
+        <ng-container *ngFor="let tech of projRoute.projects![3].tech">
           <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
-        </span>
+        </ng-container>
         <a href="{{projRoute.projects![3].repoLink}}" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
       </div>
       <ul>
@@ -116,17 +117,18 @@ projects : projects | async
 
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">Oct - Dec 2020</span>
+      <span class="project-date">{{convertDate(projRoute.projects![2].startDate)}} - {{convertDate(projRoute.projects![2].endDate)}}</span>
       <div class="timeline-line"></div>
     </div>
+
     <div class="project-description">
       <div class="fancy-txt h5">
         {{projRoute.projects![2].projectName}}
       </div>
       <div class="h6">
-        <span *ngFor="let tech of projRoute.projects![2].tech">
+        <ng-container *ngFor="let tech of projRoute.projects![2].tech">
           <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
-        </span>
+        </ng-container>
       </div>
       <ul>
         <ng-container *ngFor="let d of projRoute.projects![2].descriptions">
@@ -144,7 +146,7 @@ projects : projects | async
 
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">Apr - June 2021</span>
+      <span class="project-date">{{convertDate(projRoute.projects![1].startDate)}} - {{convertDate(projRoute.projects![1].endDate)}}</span>
       <div class="timeline-line"></div>
     </div>
 
@@ -153,9 +155,9 @@ projects : projects | async
         {{projRoute.projects![1].projectName}}
       </div>
       <div class="h6">
-        <span *ngFor="let tech of projRoute.projects![1].tech">
+        <ng-container *ngFor="let tech of projRoute.projects![1].tech">
           <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
-        </span>
+        </ng-container>
       </div>
       <ul>
         <ng-container *ngFor="let d of projRoute.projects![1].descriptions">
@@ -168,7 +170,7 @@ projects : projects | async
 
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">July - Sept 2020</span>
+      <span class="project-date">{{convertDate(projRoute.projects![0].startDate)}} - {{convertDate(projRoute.projects![0].endDate)}}</span>
     </div>
 
     <div class="project-description">
@@ -176,15 +178,16 @@ projects : projects | async
         {{projRoute.projects![0].projectName}}
       </div>
       <div class="h6">
-        <span *ngFor="let tech of projRoute.projects![0].tech">
+        <ng-container *ngFor="let tech of projRoute.projects![0].tech">
           <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
-        </span>
+        </ng-container>
       </div>
       <ul>
-        <ng-container *ngFor="let d of projRoute.projects![5].descriptions">
+        <ng-container *ngFor="let d of projRoute.projects![0].descriptions">
           <li>{{d.description1}}</li>
         </ng-container>
       </ul>
     </div>
   </div>
+
 </div>

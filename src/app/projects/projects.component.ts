@@ -17,4 +17,13 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
+  convertDate(date: string): string {
+    if (date == null) {
+      return 'Present';
+    }
+    let months = ['Present', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+    let dateArray = date.split('-');
+    return `${months[+dateArray[1]]} ${dateArray[0]}`;
+  }
 }
