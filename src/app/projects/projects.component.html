@@ -9,39 +9,29 @@
 </div>
 
 
-<div class="projects">
+<div class="projects" *ngIf="{
+projects : projects | async
+} as projRoute">
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">Apr 2023 - Present</span>
+      <span class="project-date">{{convertDate(projRoute.projects![5].startDate)}} - {{convertDate(projRoute.projects![5].endDate)}}</span>
       <div class="timeline-line"></div>
     </div>
 
     <div class="project-description">
-      <div class="fancy-txt h5">Artist Website <a href="https://pyupew.com/" class="bi bi-box-arrow-up-right" target="_blank" style="color:#afc47d"></a></div>
-      <h6>
-        <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Angular</button>
-        <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> C#</button>
-        <button type="button" class="btn-code" style="margin-right:5px" disabled><i class="fa fa-wrench"></i> AWS</button>
-        <a href="https://github.com/chaydotgit/pyupew-website" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
-      </h6>
+      <div class="fancy-txt h5">
+        {{projRoute.projects![5].projectName}} <a href="https://pyupew.com/" class="bi bi-box-arrow-up-right" target="_blank" style="color:#afc47d"></a>
+      </div>
+      <div class="h6">
+        <ng-container *ngFor="let tech of projRoute.projects![5].tech">
+          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+        </ng-container>
+        <a href="{{projRoute.projects![5].repoLink}}" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
+      </div>
       <ul>
-        <li>
-          Developed a website in Angular for an artist client who wanted to advertise her art and have a place where patrons can easily
-          look over commission options, information, and her Terms of Service.
-        </li>
-        <li>
-          Gathered requirements and aesthetic direction for the website over multiple meetings, discussing the logistics of
-          registering the domain, hosting the website, and maintenance afterwards. Sent the client multiple updates on the progress
-          of development, and made changes iteratively based on feedback.
-        </li>
-        <li>
-          Utilized AWS's Route53 and Amplify services when registering the client's domain and hosting the website. Periodically
-          check in on the website and client to maintain and debug any problems that occur.
-        </li>
-        <li>
-          Client has found having the website streamlines her commissioning process and has seen an uptick in sales on her
-          Etsy shop since website was launched.
-        </li>
+        <ng-container *ngFor="let d of projRoute.projects![5].descriptions">
+          <li>{{d.description1}}</li>
+        </ng-container>
       </ul>
       <img src="assets/images/pyupew_website.gif" class="web-gif">
     </div>
@@ -50,38 +40,24 @@
 
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">Oct 2022 - Present</span>
+      <span class="project-date">{{convertDate(projRoute.projects![4].startDate)}} - {{convertDate(projRoute.projects![4].endDate)}}</span>
       <div class="timeline-line"></div>
     </div>
 
     <div class="project-description">
-      <div class="fancy-txt h5">Portfolio Website</div>
-      <h6>
-        <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Angular</button>
-        <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> C#</button>
-        <button type="button" class="btn-code" style="margin-right:5px" disabled><i class="fa fa-wrench"></i> AWS</button>
-        <a href="https://github.com/chaydotgit/PersonalWebsite" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
-      </h6>
+      <div class="fancy-txt h5">
+        {{projRoute.projects![4].projectName}}
+      </div>
+      <div class="h6">
+        <ng-container *ngFor="let tech of projRoute.projects![4].tech">
+          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+        </ng-container>
+        <a href="{{projRoute.projects![4].repoLink}}" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
+      </div>
       <ul>
-        <li>
-          First time web development project in Angular to broaden skill set and learn more about the process and mechanics
-          of web infrastructure.
-        </li>
-        <li>
-          Researched and followed responsive, mobile-first web design practices. Learned how to use flex boxes to accommodate
-          multiple screen sizes, and utilized common frameworks used for web development - such as Bootstrap - in the process.
-        </li>
-        <li>
-          Figured out the logistics of registering domains and hosting websites through AWS's Route53 and Amplify services.
-        </li>
-        <li>
-          Built an ASP.NET Core minimal API deployed through AWS API Gateway & Lambda to integrate within the website to
-          fetch and display contact information securely.
-        </li>
-        <li>
-          Proactive about updating the website and redesigning as I become more comfortable with web development, refactoring
-          old code and modifying to follow modern web design practices. Website is currently in its second design iteration.
-        </li>
+        <ng-container *ngFor="let d of projRoute.projects![4].descriptions">
+          <li>{{d.description1}}</li>
+        </ng-container>
       </ul>
       <img src="assets/images/website_v1.gif" class="web-gif">
     </div>
@@ -90,32 +66,24 @@
 
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">June 2020 - Present</span>
+      <span class="project-date">{{convertDate(projRoute.projects![3].startDate)}} - {{convertDate(projRoute.projects![3].endDate)}}</span>
       <div class="timeline-line"></div>
     </div>
 
     <div class="project-description">
-      <div class="fancy-txt h5">Discord Bot</div>
-      <h6>
-        <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> JavaScript</button>
-        <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Node.js</button>
-        <button type="button" class="btn-code" style="margin-right:5px" disabled><i class="fa fa-wrench"></i> Discord.js</button>
-        <a href="https://github.com/chaydotgit/Chroma-Bot" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
-      </h6>
+      <div class="fancy-txt h5">
+        {{projRoute.projects![3].projectName}}
+      </div>
+      <div class="h6">
+        <ng-container *ngFor="let tech of projRoute.projects![3].tech">
+          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+        </ng-container>
+        <a href="{{projRoute.projects![3].repoLink}}" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
+      </div>
       <ul>
-        <li>
-          Personal Discord bot made in order to learn JavaScript, gain experience with integrating APIs into web projects, and
-          building a program that incorporates asynchronous architecture.
-        </li>
-        <li>
-          Implemented multiple capabilities such as member role selection, playing YouTube audio through voice channels with the
-          ytdl-core API, and listing information about anime through Jikan MAL API.
-        </li>
-        <li>
-          Constant iteration and debugging of features based on user feedback, along with migrations whenever there is a
-          new release of Discord's API.
-        </li>
-        <li>Deployed on an AWS EC2 instance where it is daemonized and managed through PM2 process manager.</li>
+        <ng-container *ngFor="let d of projRoute.projects![3].descriptions">
+          <li>{{d.description1}}</li>
+        </ng-container>
       </ul>
       <ngb-carousel>
         <ng-template ngbSlide>
@@ -149,32 +117,23 @@
 
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">Oct - Dec 2020</span>
+      <span class="project-date">{{convertDate(projRoute.projects![2].startDate)}} - {{convertDate(projRoute.projects![2].endDate)}}</span>
       <div class="timeline-line"></div>
     </div>
+
     <div class="project-description">
-      <div class="fancy-txt h5">AI Development, Bug Fixing, and Animation Implementation in Video Game Development Project</div>
-      <h6>
-        <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Unity</button>
-        <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> C#</button>
-      </h6>
+      <div class="fancy-txt h5">
+        {{projRoute.projects![2].projectName}}
+      </div>
+      <div class="h6">
+        <ng-container *ngFor="let tech of projRoute.projects![2].tech">
+          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+        </ng-container>
+      </div>
       <ul>
-        <li>
-          Group video game development project of a 2D platformer game with unique health mechanics.
-        </li>
-        <li>
-          Implemented enemy AI using an A* Pathfinding package, as well as optimized the enemies’ damage, speed, and
-          placement throughout the level.
-        </li>
-        <li>
-          Implemented character sprites and animations.
-        </li>
-        <li>
-          Iteratively made changes and fixed bugs based on players’ feedback.
-        </li>
-        <li>
-          Worked collaboratively with 5 others using Git, and was the main source of help when merge conflicts occurred.
-        </li>
+        <ng-container *ngFor="let d of projRoute.projects![2].descriptions">
+          <li>{{d.description1}}</li>
+        </ng-container>
       </ul>
       <div class="youtube-player">
         <div>
@@ -187,30 +146,23 @@
 
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">Apr - June 2021</span>
+      <span class="project-date">{{convertDate(projRoute.projects![1].startDate)}} - {{convertDate(projRoute.projects![1].endDate)}}</span>
       <div class="timeline-line"></div>
     </div>
 
     <div class="project-description">
-      <div class="fancy-txt h5">Crux Compiler</div>
-      <h6>
-        <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Java</button>
-      </h6>
+      <div class="fancy-txt h5">
+        {{projRoute.projects![1].projectName}}
+      </div>
+      <div class="h6">
+        <ng-container *ngFor="let tech of projRoute.projects![1].tech">
+          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+        </ng-container>
+      </div>
       <ul>
-        <li>
-          Built a simple compiler that translates the Crux programming language into executable x86 assembly.
-        </li>
-        <li>
-          Utilized ANTLR to generate a parser for the specified Crux grammar to create a parse tree that is used to
-          create an Abstract Syntax Tree (AST).
-        </li>
-        <li>
-          Implemented a compile time type checker to catch any possible type errors.
-        </li>
-        <li>
-          Expanded my knowledge of the compiler pipeline from code to assembly and the possible inefficiencies that
-          may stem from programmer oversight.
-        </li>
+        <ng-container *ngFor="let d of projRoute.projects![1].descriptions">
+          <li>{{d.description1}}</li>
+        </ng-container>
       </ul>
     </div>
   </div>
@@ -218,32 +170,24 @@
 
   <div class="project-item">
     <div class="timeline">
-      <span class="project-date">July - Sept 2020</span>
+      <span class="project-date">{{convertDate(projRoute.projects![0].startDate)}} - {{convertDate(projRoute.projects![0].endDate)}}</span>
     </div>
 
     <div class="project-description">
-      <div class="fancy-txt h5">Charting UI and Message Analysis for Stock Trading Bot</div>
-      <h6>
-        <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> Python</button>
-      </h6>
+      <div class="fancy-txt h5">
+        {{projRoute.projects![0].projectName}}
+      </div>
+      <div class="h6">
+        <ng-container *ngFor="let tech of projRoute.projects![0].tech">
+          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+        </ng-container>
+      </div>
       <ul>
-        <li>
-          Took part along with 3 others in the development of a bot that uses Robinhood's / TD Ameritrade's API to trade
-          stocks based on announcements from a Discord server.
-        </li>
-        <li>
-          Worked with Finplot and Pandas packages to generate stock charts within a set period of time based on Yahoo stock
-          data that marked where the bot had bought and sold.
-        </li>
-        <li>
-          Implemented heuristic regex parsing of Discord messages to mark what messages were important and which were alerts
-          to buy and sell certain stocks.
-        </li>
-        <li>
-          Created unit tests for the bot in order to verify that the bot was categorizing messages correctly, and made
-          changes to message parsing if the bot had unexpected output.
-        </li>
+        <ng-container *ngFor="let d of projRoute.projects![0].descriptions">
+          <li>{{d.description1}}</li>
+        </ng-container>
       </ul>
     </div>
   </div>
+
 </div>
