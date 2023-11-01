@@ -158,6 +158,12 @@ ngb-carousel {
   .projects-intro {
     margin: 30px 30%;
   }
+
+  .loading-img {
+    width: 500px;
+    margin: auto;
+  }
+
   .projects {
     margin: 30px 100px 80px;
   }

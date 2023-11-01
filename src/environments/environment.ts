@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   contactApi: 'https://localhost:7252/api/contact/email',
-  projectApi: 'https://localhost:7074/api'
+  projectApi: 'https://localhost:7051/api'
 };
 
 /*

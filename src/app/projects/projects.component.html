@@ -12,182 +12,186 @@
 <div class="projects" *ngIf="{
 projects : projects | async
 } as projRoute">
-  <div class="project-item">
-    <div class="timeline">
-      <span class="project-date">{{convertDate(projRoute.projects![5].startDate)}} - {{convertDate(projRoute.projects![5].endDate)}}</span>
-      <div class="timeline-line"></div>
+  <ng-container *ngIf="projRoute.projects; else elseBlock">
+    <div class="project-item">
+      <div class="timeline">
+        <span class="project-date">{{convertDate(projRoute.projects![5].startDate)}} - {{convertDate(projRoute.projects![5].endDate)}}</span>
+        <div class="timeline-line"></div>
+      </div>
+
+      <div class="project-description">
+        <div class="fancy-txt h5">
+          {{projRoute.projects![5].projectName}} <a href="https://pyupew.com/" class="bi bi-box-arrow-up-right" target="_blank" style="color:#afc47d"></a>
+        </div>
+        <div class="h6">
+          <ng-container *ngFor="let tech of projRoute.projects![5].tech">
+            <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+          </ng-container>
+          <a href="{{projRoute.projects![5].repoLink}}" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
+        </div>
+        <ul>
+          <ng-container *ngFor="let d of projRoute.projects![5].descriptions">
+            <li>{{d.description1}}</li>
+          </ng-container>
+        </ul>
+        <img src="assets/images/pyupew_website.gif" class="web-gif">
+      </div>
     </div>
 
-    <div class="project-description">
-      <div class="fancy-txt h5">
-        {{projRoute.projects![5].projectName}} <a href="https://pyupew.com/" class="bi bi-box-arrow-up-right" target="_blank" style="color:#afc47d"></a>
+
+    <div class="project-item">
+      <div class="timeline">
+        <span class="project-date">{{convertDate(projRoute.projects![4].startDate)}} - {{convertDate(projRoute.projects![4].endDate)}}</span>
+        <div class="timeline-line"></div>
       </div>
-      <div class="h6">
-        <ng-container *ngFor="let tech of projRoute.projects![5].tech">
-          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
-        </ng-container>
-        <a href="{{projRoute.projects![5].repoLink}}" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
+
+      <div class="project-description">
+        <div class="fancy-txt h5">
+          {{projRoute.projects![4].projectName}}
+        </div>
+        <div class="h6">
+          <ng-container *ngFor="let tech of projRoute.projects![4].tech">
+            <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+          </ng-container>
+          <a href="{{projRoute.projects![4].repoLink}}" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
+        </div>
+        <ul>
+          <ng-container *ngFor="let d of projRoute.projects![4].descriptions">
+            <li>{{d.description1}}</li>
+          </ng-container>
+        </ul>
+        <img src="assets/images/website_v1.gif" class="web-gif">
       </div>
-      <ul>
-        <ng-container *ngFor="let d of projRoute.projects![5].descriptions">
-          <li>{{d.description1}}</li>
-        </ng-container>
-      </ul>
-      <img src="assets/images/pyupew_website.gif" class="web-gif">
-    </div>
-  </div>
-
-
-  <div class="project-item">
-    <div class="timeline">
-      <span class="project-date">{{convertDate(projRoute.projects![4].startDate)}} - {{convertDate(projRoute.projects![4].endDate)}}</span>
-      <div class="timeline-line"></div>
-    </div>
-
-    <div class="project-description">
-      <div class="fancy-txt h5">
-        {{projRoute.projects![4].projectName}}
-      </div>
-      <div class="h6">
-        <ng-container *ngFor="let tech of projRoute.projects![4].tech">
-          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
-        </ng-container>
-        <a href="{{projRoute.projects![4].repoLink}}" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
-      </div>
-      <ul>
-        <ng-container *ngFor="let d of projRoute.projects![4].descriptions">
-          <li>{{d.description1}}</li>
-        </ng-container>
-      </ul>
-      <img src="assets/images/website_v1.gif" class="web-gif">
-    </div>
-  </div>
-
-
-  <div class="project-item">
-    <div class="timeline">
-      <span class="project-date">{{convertDate(projRoute.projects![3].startDate)}} - {{convertDate(projRoute.projects![3].endDate)}}</span>
-      <div class="timeline-line"></div>
     </div>
 
-    <div class="project-description">
-      <div class="fancy-txt h5">
-        {{projRoute.projects![3].projectName}}
+
+    <div class="project-item">
+      <div class="timeline">
+        <span class="project-date">{{convertDate(projRoute.projects![3].startDate)}} - {{convertDate(projRoute.projects![3].endDate)}}</span>
+        <div class="timeline-line"></div>
       </div>
-      <div class="h6">
-        <ng-container *ngFor="let tech of projRoute.projects![3].tech">
-          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
-        </ng-container>
-        <a href="{{projRoute.projects![3].repoLink}}" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
+
+      <div class="project-description">
+        <div class="fancy-txt h5">
+          {{projRoute.projects![3].projectName}}
+        </div>
+        <div class="h6">
+          <ng-container *ngFor="let tech of projRoute.projects![3].tech">
+            <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+          </ng-container>
+          <a href="{{projRoute.projects![3].repoLink}}" class="btn-repo" target="_blank"><i class="fa fa-github"></i> Git Repo</a>
+        </div>
+        <ul>
+          <ng-container *ngFor="let d of projRoute.projects![3].descriptions">
+            <li>{{d.description1}}</li>
+          </ng-container>
+        </ul>
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <img src="../../assets/images/discbot1.png" class="slide-img d-block w-100">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="text">List of Commands</div>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="../../assets/images/discbot2.png" class="slide-img d-block w-100">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="text">MyAnimeList Search</div>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="../../assets/images/discbot4.png" class="slide-img d-block w-100">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="text">Music Player</div>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="../../assets/images/discbot3.png" class="slide-img d-block w-100">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="text">Color and Pronoun Changer</div>
+            </div>
+          </ng-template>
+        </ngb-carousel>
       </div>
-      <ul>
-        <ng-container *ngFor="let d of projRoute.projects![3].descriptions">
-          <li>{{d.description1}}</li>
-        </ng-container>
-      </ul>
-      <ngb-carousel>
-        <ng-template ngbSlide>
-          <img src="../../assets/images/discbot1.png" class="slide-img d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-            <div class="text">List of Commands</div>
+    </div>
+
+
+    <div class="project-item">
+      <div class="timeline">
+        <span class="project-date">{{convertDate(projRoute.projects![2].startDate)}} - {{convertDate(projRoute.projects![2].endDate)}}</span>
+        <div class="timeline-line"></div>
+      </div>
+
+      <div class="project-description">
+        <div class="fancy-txt h5">
+          {{projRoute.projects![2].projectName}}
+        </div>
+        <div class="h6">
+          <ng-container *ngFor="let tech of projRoute.projects![2].tech">
+            <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+          </ng-container>
+        </div>
+        <ul>
+          <ng-container *ngFor="let d of projRoute.projects![2].descriptions">
+            <li>{{d.description1}}</li>
+          </ng-container>
+        </ul>
+        <div class="youtube-player">
+          <div>
+            <iframe src="https://www.youtube.com/embed/WUB3EefS9Lc" title="Transfusion Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <img src="../../assets/images/discbot2.png" class="slide-img d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-            <div class="text">MyAnimeList Search</div>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <img src="../../assets/images/discbot4.png" class="slide-img d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-            <div class="text">Music Player</div>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <img src="../../assets/images/discbot3.png" class="slide-img d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-            <div class="text">Color and Pronoun Changer</div>
-          </div>
-        </ng-template>
-      </ngb-carousel>
-    </div>
-  </div>
-
-
-  <div class="project-item">
-    <div class="timeline">
-      <span class="project-date">{{convertDate(projRoute.projects![2].startDate)}} - {{convertDate(projRoute.projects![2].endDate)}}</span>
-      <div class="timeline-line"></div>
-    </div>
-
-    <div class="project-description">
-      <div class="fancy-txt h5">
-        {{projRoute.projects![2].projectName}}
-      </div>
-      <div class="h6">
-        <ng-container *ngFor="let tech of projRoute.projects![2].tech">
-          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
-        </ng-container>
-      </div>
-      <ul>
-        <ng-container *ngFor="let d of projRoute.projects![2].descriptions">
-          <li>{{d.description1}}</li>
-        </ng-container>
-      </ul>
-      <div class="youtube-player">
-        <div>
-          <iframe src="https://www.youtube.com/embed/WUB3EefS9Lc" title="Transfusion Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="project-item">
-    <div class="timeline">
-      <span class="project-date">{{convertDate(projRoute.projects![1].startDate)}} - {{convertDate(projRoute.projects![1].endDate)}}</span>
-      <div class="timeline-line"></div>
+    <div class="project-item">
+      <div class="timeline">
+        <span class="project-date">{{convertDate(projRoute.projects![1].startDate)}} - {{convertDate(projRoute.projects![1].endDate)}}</span>
+        <div class="timeline-line"></div>
+      </div>
+
+      <div class="project-description">
+        <div class="fancy-txt h5">
+          {{projRoute.projects![1].projectName}}
+        </div>
+        <div class="h6">
+          <ng-container *ngFor="let tech of projRoute.projects![1].tech">
+            <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+          </ng-container>
+        </div>
+        <ul>
+          <ng-container *ngFor="let d of projRoute.projects![1].descriptions">
+            <li>{{d.description1}}</li>
+          </ng-container>
+        </ul>
+      </div>
     </div>
 
-    <div class="project-description">
-      <div class="fancy-txt h5">
-        {{projRoute.projects![1].projectName}}
+
+    <div class="project-item">
+      <div class="timeline">
+        <span class="project-date">{{convertDate(projRoute.projects![0].startDate)}} - {{convertDate(projRoute.projects![0].endDate)}}</span>
       </div>
-      <div class="h6">
-        <ng-container *ngFor="let tech of projRoute.projects![1].tech">
-          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
-        </ng-container>
+
+      <div class="project-description">
+        <div class="fancy-txt h5">
+          {{projRoute.projects![0].projectName}}
+        </div>
+        <div class="h6">
+          <ng-container *ngFor="let tech of projRoute.projects![0].tech">
+            <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
+          </ng-container>
+        </div>
+        <ul>
+          <ng-container *ngFor="let d of projRoute.projects![0].descriptions">
+            <li>{{d.description1}}</li>
+          </ng-container>
+        </ul>
       </div>
-      <ul>
-        <ng-container *ngFor="let d of projRoute.projects![1].descriptions">
-          <li>{{d.description1}}</li>
-        </ng-container>
-      </ul>
     </div>
-  </div>
-
-
-  <div class="project-item">
-    <div class="timeline">
-      <span class="project-date">{{convertDate(projRoute.projects![0].startDate)}} - {{convertDate(projRoute.projects![0].endDate)}}</span>
-    </div>
-
-    <div class="project-description">
-      <div class="fancy-txt h5">
-        {{projRoute.projects![0].projectName}}
-      </div>
-      <div class="h6">
-        <ng-container *ngFor="let tech of projRoute.projects![0].tech">
-          <button type="button" class="btn-code" disabled><i class="fa fa-wrench"></i> {{tech}}</button>
-        </ng-container>
-      </div>
-      <ul>
-        <ng-container *ngFor="let d of projRoute.projects![0].descriptions">
-          <li>{{d.description1}}</li>
-        </ng-container>
-      </ul>
-    </div>
-  </div>
-
+  </ng-container>
+  <ng-template #elseBlock>
+    <img class="loading-img" src="assets/images/loading.gif" width="100%">
+  </ng-template>
 </div>
